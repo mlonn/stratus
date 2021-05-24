@@ -50,9 +50,8 @@
         Båthus kan hyras vintern 21/22
       </p>
     </section>
-    <div id="zoom">
-      <Image image="outside5" w={1000} h={667} />
-    </div>
+
+    <Image image="outside5" w={1000} h={667} />
   {:else if page === 'partsList'}
     <section>
       <PartsList />

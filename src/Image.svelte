@@ -2,17 +2,24 @@
 <script lang="ts">
   export let image: string;
   export let clickable: boolean;
-  export let w: string | number = 300;
-  export let h: string | number = 200;
+  export let w: number = 300;
+  export let h: number = 200;
 
   const base = 'https://res.cloudinary.com/dzf3v5esf/image/upload/q_auto';
   const cloudinaryId = 'v1621842384/Serenity';
   const url = `${base}/${cloudinaryId}/${image}.jpg`;
-  const thumbnail = `${base}/w_${w},h_${h},c_fill/${cloudinaryId}/${image}.jpg`;
+  const thumbnail = `${base}/w_${Math.floor(w * 1.05)},h_${Math.floor(
+    h * 1.05
+  )},c_fill/${cloudinaryId}/${image}.jpg`;
 </script>
 
 <a data-src={url} data-sub-html="<div></div>">
-  <img class={clickable ? 'clickable' : ''} alt={image} src={thumbnail} />
+  <img
+    class={clickable ? 'clickable' : ''}
+    style={`width:${w}; height:${h}`}
+    alt={image}
+    src={thumbnail}
+  />
 </a>
 
 <style>
@@ -22,6 +29,7 @@
     max-width: 100%;
   }
   img {
+    transition: transform ease-in-out 0.2s;
     max-width: 100%;
     display: block;
   }
@@ -30,7 +38,9 @@
   }
   img.clickable:hover {
     transform: scale(1.05);
+    transform: perspective(500px) rotateY(5deg);
+    transform: perspective(500px) rotateX(5deg);
     border-radius: 5px;
-    transition: transform 0.2s;
+    box-shadow: 0px 0px 15px 15px rgba(40, 44, 52, 0.8);
   }
 </style>
