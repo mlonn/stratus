@@ -1,5 +1,7 @@
 <script lang="ts">
   import lightGallery from 'lightgallery';
+  import lgHash from 'lightgallery/plugins/hash';
+  import lgThumbnail from 'lightgallery/plugins/thumbnail';
   import lgZoom from 'lightgallery/plugins/zoom';
   import { onMount } from 'svelte';
   import Image from './Image.svelte';
@@ -42,7 +44,9 @@
   onMount(() => {
     lightGallery(document.getElementById('gallery-container'), {
       speed: 500,
-      plugins: [lgZoom],
+      customSlideName: true,
+
+      plugins: [lgZoom, lgThumbnail, lgHash],
     });
   });
 </script>

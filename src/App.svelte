@@ -1,5 +1,5 @@
 <script lang="ts">
-  let page = 'index';
+  let page = window.location.href.includes('lg') ? 'gallery' : 'index';
   import Gallery from './Gallery.svelte';
   import Image from './Image.svelte';
   import PartsList from './PartsList.svelte';

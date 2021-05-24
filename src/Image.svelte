@@ -13,7 +13,7 @@
   )},c_fill/${cloudinaryId}/${image}.jpg`;
 </script>
 
-<a data-src={url} data-sub-html="<div></div>">
+<a data-src={url} data-sub-html="<div></div>" data-slide-name={image}>
   <img
     class={clickable ? 'clickable' : ''}
     style={`width:${w}; height:${h}`}
