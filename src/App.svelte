@@ -69,6 +69,7 @@
   nav {
     display: grid;
     position: sticky;
+    background-color: rgb(40, 44, 52);
     grid-template-columns: 1fr 1fr 1fr;
     top: 0;
     margin-bottom: 1rem;
@@ -86,6 +87,7 @@
     background: #0486a9;
   }
   section {
+    padding: 8px;
     max-width: 700px;
   }
 </style>
