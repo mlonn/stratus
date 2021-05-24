@@ -2,7 +2,7 @@
 <script lang="ts">
   export let image: string;
   const base = 'https://res.cloudinary.com/dzf3v5esf/image/upload';
-  const cloudinaryId = 'v1621842386/Serenity';
+  const cloudinaryId = 'v1621842384/Serenity';
   const url = `${base}/${cloudinaryId}/${image}.jpg`;
   const thumbnail = `${base}/h_250,c_scale/${cloudinaryId}/${image}.jpg`;
 </script>

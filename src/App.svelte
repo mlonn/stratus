@@ -1,48 +1,91 @@
 <script lang="ts">
-  import lightGallery from 'lightgallery';
-  import lgThumbnail from 'lightgallery/plugins/thumbnail';
-  import lgZoom from 'lightgallery/plugins/zoom';
-  import { onMount } from 'svelte';
-  import Image from './Image.svelte';
-
-  onMount(() => {
-    lightGallery(document.getElementById('gallery-container'), {
-      speed: 500,
-      plugins: [lgZoom, lgThumbnail],
-    });
-  });
+  let page = 'index';
+  import Gallery from './Gallery.svelte';
+  import PartsList from './PartsList.svelte';
 </script>
 
 <main>
-  <h1>Albin Stratus</h1>
-  <div id="gallery-container">
-    <Image image="main1" />
-    <Image image="main2" />
-    <Image image="kitchen1" />
-    <Image image="kitchen2" />
-    <Image image="kitchen3" />
-    <Image image="back" />
-    <Image image="front1" />
-    <Image image="front2" />
-    <Image image="bathroom" />
-    <Image image="batteries" />
-    <Image image="battery_charge" />
-    <Image image="battery_voltage" />
-  </div>
+  <h1>Albin Stratus no 38 Serenity</h1>
+  <nav>
+    <button
+      class={page === 'index' ? 'active' : ''}
+      on:click={() => (page = 'index')}>Hem</button
+    >
+    <button
+      class={page === 'gallery' ? 'active' : ''}
+      on:click={() => (page = 'gallery')}>Bilder</button
+    >
+    <button
+      class={page === 'partsList' ? 'active' : ''}
+      on:click={() => (page = 'partsList')}>Utrustningslista</button
+    >
+  </nav>
+  {#if page === 'index'}
+    <section>
+      <p>
+        Nu säljer vi vår fina Albin Stratus som vi vårdat sen 2006. Vintern 2007
+        hade vi henne inomhus för större uppgradering och epoxibehandling.
+        Mycket är nytt de senaste åren bland annat Motor Volvo Penta D1-30,
+        Självslående fock och rullgennacker (Code 1) och Peke med kastettstege.
+        Båten har inte teakdäck. Övrigt se utrustningslista
+      </p>
+      <p>
+        Med Code1 seglar man om båtar som går för motor i 3m/s. Mycket
+        lätthanterad i både lätt och hård vind allt neddraget till sittbrunn
+        samt singel rev bom
+      </p>
+      <p>
+        Stort djupt roder med fenköl gör båten lättseglad och med fantastisk
+        manöverförmåga i hamn med 3 bladig foldingpropeller.
+      </p>
+      <p>
+        Med en riktigt rymlig sittbrunn finns gott om plats för familj och
+        vänner. Invändigt finns 7 kojer och gott om stuvutrymmen för
+        semesterseglingen.
+      </p>
+      <p>
+        Hon står på land i båthus klar för sjösättning. Naturligtvis ingår
+        sjösättning och påmastning. Båtplats finns för sommaren 2021 i Västerås.
+        Båthus kan hyras vintern 21/22
+      </p>
+    </section>
+  {:else if page === 'partsList'}
+    <section>
+      <PartsList />
+    </section>
+  {:else if page === 'gallery'}
+    <Gallery />
+  {/if}
 </main>
 
 <style>
   main {
     display: grid;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
+    justify-items: center;
   }
-
-  #gallery-container {
-    max-width: 1280px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  h1 {
+    text-align: center;
+  }
+  nav {
+    display: grid;
+    position: sticky;
+    grid-template-columns: 1fr 1fr 1fr;
+    top: 0;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+  button {
+    padding: 1rem;
+    color: white;
+    font-size: 1em;
+    background: #aaa;
+    border-radius: none;
+    border: none;
+  }
+  .active {
+    background: #0486a9;
+  }
+  section {
+    max-width: 700px;
   }
 </style>
