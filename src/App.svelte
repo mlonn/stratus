@@ -1,5 +1,5 @@
 <script lang="ts">
-  import lightGallery from 'lightGallery';
+  import lightGallery from 'lightgallery';
   import lgThumbnail from 'lightgallery/plugins/thumbnail';
   import lgZoom from 'lightgallery/plugins/zoom';
   import { onMount } from 'svelte';
