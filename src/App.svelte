@@ -1,6 +1,7 @@
 <script lang="ts">
   let page = 'index';
   import Gallery from './Gallery.svelte';
+  import Image from './Image.svelte';
   import PartsList from './PartsList.svelte';
 </script>
 
@@ -49,6 +50,9 @@
         Båthus kan hyras vintern 21/22
       </p>
     </section>
+    <div id="zoom">
+      <Image image="outside5" w={1000} h={667} />
+    </div>
   {:else if page === 'partsList'}
     <section>
       <PartsList />
