@@ -20,6 +20,11 @@
   <Image image="outside5" />
   <Image image="outside6" />
   <Image image="outside7" />
+  <Image image="outside8" />
+  <Image image="sail" />
+  <Image image="rainbow" />
+  <Image image="flags" />
+  <Image image="spinnaker" />
   <Image image="main1" />
   <Image image="main2" />
   <Image image="kitchen1" />
