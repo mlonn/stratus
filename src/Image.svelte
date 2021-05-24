@@ -1,7 +1,7 @@
 <!-- svelte-ignore a11y-missing-attribute -->
 <script lang="ts">
   export let image: string;
-  const base = 'https://res.cloudinary.com/dzf3v5esf/image/upload';
+  const base = 'https://res.cloudinary.com/dzf3v5esf/image/upload/q_auto';
   const cloudinaryId = 'v1621842384/Serenity';
   const url = `${base}/${cloudinaryId}/${image}.jpg`;
   const thumbnail = `${base}/w_300,c_scale/${cloudinaryId}/${image}.jpg`;
