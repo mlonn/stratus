@@ -23,7 +23,6 @@
     'main2',
     'kitchen1',
     'kitchen2',
-    'kitchen3',
     'back',
     'front1',
     'front2',

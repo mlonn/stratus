@@ -74,8 +74,8 @@
     position: sticky;
     background-color: rgb(40, 44, 52);
     grid-template-columns: 1fr 1fr 1fr;
+    align-items: end;
     top: 0;
-
     width: 100%;
   }
   button {
