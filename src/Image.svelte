@@ -7,7 +7,7 @@
   const thumbnail = `${base}/h_250,c_scale/${cloudinaryId}/${image}.jpg`;
 </script>
 
-<a data-src={url}>
+<a data-src={url} data-sub-html="<div></div>">
   <img class="img-responsive" alt={image} src={thumbnail} />
 </a>
 
