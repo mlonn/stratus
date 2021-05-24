@@ -32,13 +32,6 @@
 </main>
 
 <style>
-  @import url('https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lightgallery.css');
-  @import url('https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lg-zoom.css');
-  @import url('https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lg-thumbnail.css');
-  :global(body) {
-    background-color: rgb(40, 44, 52);
-    color: white;
-  }
   main {
     display: grid;
     align-items: center;

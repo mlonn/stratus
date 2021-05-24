@@ -15,8 +15,10 @@
   a {
     margin-right: 4px;
     margin-bottom: 4px;
+    max-width: 100%;
   }
   img {
+    width: 100%;
     display: block;
   }
 </style>
