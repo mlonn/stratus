@@ -76,7 +76,7 @@
     background-color: rgb(40, 44, 52);
     grid-template-columns: 1fr 1fr 1fr;
     top: 0;
-    margin-bottom: 1rem;
+
     width: 100%;
   }
   button {
