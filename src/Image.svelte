@@ -4,7 +4,7 @@
   const base = 'https://res.cloudinary.com/dzf3v5esf/image/upload';
   const cloudinaryId = 'v1621842384/Serenity';
   const url = `${base}/${cloudinaryId}/${image}.jpg`;
-  const thumbnail = `${base}/h_250,c_scale/${cloudinaryId}/${image}.jpg`;
+  const thumbnail = `${base}/w_300,c_scale/${cloudinaryId}/${image}.jpg`;
 </script>
 
 <a data-src={url} data-sub-html="<div></div>">
@@ -18,7 +18,9 @@
     max-width: 100%;
   }
   img {
-    width: 100%;
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
     display: block;
   }
 </style>
