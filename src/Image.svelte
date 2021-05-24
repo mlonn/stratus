@@ -29,7 +29,7 @@
     max-width: 100%;
   }
   img {
-    transition: transform ease-in-out 0.2s;
+    transition: all ease-in-out 0.2s;
     max-width: 100%;
     display: block;
   }
