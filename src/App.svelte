@@ -80,11 +80,19 @@
     color: white;
     font-size: 1em;
     background: #aaa;
+    cursor: pointer;
     border-radius: none;
     border: none;
   }
-  .active {
+
+  button:hover {
+    background: #999;
+  }
+  button.active {
     background: #0486a9;
+  }
+  button.active:hover {
+    background: #037898;
   }
   section {
     padding: 8px;
