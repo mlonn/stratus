@@ -1,8 +1,10 @@
 <!-- svelte-ignore a11y-missing-attribute -->
 <script lang="ts">
   export let image: string;
+  export let clickable: boolean;
   export let w: string | number = 300;
   export let h: string | number = 200;
+
   const base = 'https://res.cloudinary.com/dzf3v5esf/image/upload/q_auto';
   const cloudinaryId = 'v1621842384/Serenity';
   const url = `${base}/${cloudinaryId}/${image}.jpg`;
@@ -10,7 +12,7 @@
 </script>
 
 <a data-src={url} data-sub-html="<div></div>">
-  <img class="img-responsive" alt={image} src={thumbnail} />
+  <img class={clickable ? 'clickable' : ''} alt={image} src={thumbnail} />
 </a>
 
 <style>
@@ -22,5 +24,13 @@
   img {
     max-width: 100%;
     display: block;
+  }
+  img.clickable {
+    cursor: pointer;
+  }
+  img.clickable:hover {
+    transform: scale(1.05);
+    border-radius: 5px;
+    transition: transform 0.2s;
   }
 </style>

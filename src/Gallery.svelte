@@ -4,6 +4,38 @@
   import { onMount } from 'svelte';
   import Image from './Image.svelte';
 
+  const images = [
+    'outside1',
+    'outside2',
+    'outside3',
+    'outside4',
+    'outside5',
+    'outside6',
+    'outside7',
+    'outside8',
+    'sail',
+    'rainbow',
+    'flags',
+    'spinnaker',
+    'cockpit1',
+    'cockpit2',
+    'main1',
+    'main2',
+    'kitchen1',
+    'kitchen2',
+    'kitchen3',
+    'back',
+    'front1',
+    'front2',
+    'bathroom',
+    'map',
+    'engine',
+    'batteries',
+    'battery_charge',
+    'battery_voltage',
+    'webasto',
+    'blueprint',
+  ];
   onMount(() => {
     lightGallery(document.getElementById('gallery-container'), {
       speed: 500,
@@ -13,31 +45,9 @@
 </script>
 
 <div id="gallery-container">
-  <Image image="outside1" />
-  <Image image="outside2" />
-  <Image image="outside3" />
-  <Image image="outside4" />
-  <Image image="outside5" />
-  <Image image="outside6" />
-  <Image image="outside7" />
-  <Image image="outside8" />
-  <Image image="sail" />
-  <Image image="rainbow" />
-  <Image image="flags" />
-  <Image image="spinnaker" />
-  <Image image="main1" />
-  <Image image="main2" />
-  <Image image="kitchen1" />
-  <Image image="kitchen2" />
-  <Image image="kitchen3" />
-  <Image image="back" />
-  <Image image="front1" />
-  <Image image="front2" />
-  <Image image="bathroom" />
-  <Image image="batteries" />
-  <Image image="battery_charge" />
-  <Image image="battery_voltage" />
-  <Image image="webasto" />
+  {#each images as image}
+    <Image clickable {image} />
+  {/each}
 </div>
 
 <style>
