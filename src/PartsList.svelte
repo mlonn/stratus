@@ -33,7 +33,7 @@
   <li>Bom Singel Line Reef Benn´s</li>
   <li>Rodkick Benn´s (ny kolv 2018)</li>
   <li>Skotskena Lewmar med flytande travare</li>
-  <li>Easymatic Serie 2 storskotsystem 2-växlad 8:1 / 4:1 skot nytt 2020</li>
+  <li>Lewmar storskotssystem 6:1 skot nytt 2020</li>
   <li>Omklädd ratt med älghud (2014)</li>
   <li>
     Vinschar ST från 2007 Lewmar 2x44 Genua/Fock, 2x16 Spinnacker/storskot och
@@ -59,8 +59,8 @@
 
 <ul>
   <li>
-    Navigator Garmin GPSMap 4008 med blueChart g2 hela östersjön, NMEA 0183 och
-    NMEA 2000
+    Navigator Garmin GPSMap 4008 med blueChart g2 VEU 711L Södra Sverige, NMEA
+    0183 och NMEA 2000
   </li>
   <li>Vindinstrument, logg och ekolod Silva</li>
   <li>Autopilot Raymarine kan styras av plottern</li>
